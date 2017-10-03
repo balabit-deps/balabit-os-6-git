@@ -1,0 +1,6 @@
+CVE-2017-8386.patch
+CVE-2017-1000117.patch
+shell-drop-git-cvsserver-support-by-default.diff
+cvsserver-use-safe_pipe_capture.diff
+cvsimport-shell-quote-variable-used-in-backticks.diff
+archimport-use-safe_pipe_capture-for-user-input.diff

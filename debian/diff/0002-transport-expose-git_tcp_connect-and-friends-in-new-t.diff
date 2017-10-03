@@ -54,7 +54,7 @@ index fd7ffe1..9fbe198 100644
  {
  	char *host = *hoststart;
  	char *end;
-@@ -300,273 +301,6 @@ static char *host_end(char **hoststart, int removebrackets)
+@@ -300,278 +301,6 @@ static char *host_end(char **hoststart, int removebrackets)
  	return end;
  }
  
@@ -311,6 +311,11 @@ index fd7ffe1..9fbe198 100644
 -
 -	get_host_and_port(&host, &port);
 -
+-	if (looks_like_command_line_option(host))
+-		die("strange hostname '%s' blocked", host);
+-	if (looks_like_command_line_option(port))
+-		die("strange port '%s' blocked", port);
+-
 -	proxy = xmalloc(sizeof(*proxy));
 -	child_process_init(proxy);
 -	argv_array_push(&proxy->args, git_proxy_command);
@@ -344,7 +349,7 @@ new file mode 100644
 index 0000000..c8e3a9d
 --- /dev/null
 +++ b/tcp.c
-@@ -0,0 +1,271 @@
+@@ -0,0 +1,276 @@
 +#include "cache.h"
 +#include "tcp.h"
 +#include "run-command.h"
@@ -602,6 +607,11 @@ index 0000000..c8e3a9d
 +	struct child_process *proxy;
 +
 +	get_host_and_port(&host, &port);
++
++	if (looks_like_command_line_option(host))
++		die("strange hostname '%s' blocked", host);
++	if (looks_like_command_line_option(port))
++		die("strange port '%s' blocked", port);
 +
 +	proxy = xmalloc(sizeof(*proxy));
 +	child_process_init(proxy);
