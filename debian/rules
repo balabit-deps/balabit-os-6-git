@@ -67,6 +67,7 @@ build-arch-stamp: patch-stamp
 	DESTDIR='$(GIT)' $(MAKE) all $(OPTS)
 	DESTDIR='$(GIT)' $(MAKE) -C contrib/subtree all $(OPTS)
 	ln -s contrib/subtree/git-subtree
+	chmod +x t/t[0-9]*.sh
 	test -z '$(TEST)' || \
 	  DESTDIR='$(GIT)' $(MAKE) $(TEST) $(OPTS) || \
 	  GIT_TEST_OPTS=--verbose DESTDIR='$(GIT)' $(MAKE) $(TEST) $(OPTS)

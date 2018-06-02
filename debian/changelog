@@ -1,3 +1,36 @@
+git (1:2.7.4-0ubuntu1.4) xenial-security; urgency=medium
+
+  * SECURITY UPDATE: arbitrary code execution via
+    submodule names in .gitsubmodules.
+    - 0014-fsck-simplify-.git-check.patch
+    - 0015-fsck-actually-fsck-blob-data.patch
+    - 0016-fsck-detect-gitmodules-files.patch
+    - 0017-fsck-check-.gitmodules-content.patch
+    - 0018-fsck-call-fsck_finish-after-fscking-objects.patch
+    - 0019-unpack-objects-call-fsck_finish-after-fscking-object.patch
+    - 0020-index-pack-check-.gitmodules-files-with-strict.patch
+    - CVE-2018-11235 (LP: #1774061)
+  * SECURITY UPDATE: out-of-bounds memory access when sanity-checking
+    pathnames on NTFS
+    - 0002-is_ntfs_dotgit-use-a-size_t-for-traversing-string.patch
+    - CVE-2018-11233
+  * Do not allow .gitmodules to be a symlink:
+    - 0003-is_hfs_dotgit-match-other-.git-files.patch
+    - 0004-is_ntfs_dotgit-match-other-.git-files.patch
+    - 0005-is_-hfs-ntfs-_dotgitmodules-add-tests.patch
+    - 0006-skip_prefix-add-case-insensitive-variant.patch
+    - 0007-verify_path-drop-clever-fallthrough.patch
+    - 0008-verify_dotfile-mention-case-insensitivity-in-comment.patch
+    - 0009-update-index-stat-updated-files-earlier.patch
+    - 0010-verify_path-disallow-symlinks-in-.gitmodules.patch
+    - 0011-sha1_file-add-read_loose_object-function.patch
+    - 0012-fsck-parse-loose-object-paths-directly.patch
+    - 0013-index-pack-make-fsck-error-message-more-specific.patch
+    - 0021-fsck-complain-when-.gitmodules-is-a-symlink.patch
+  * debian/rules: ensure added tests are executable.
+
+ -- Steve Beattie <sbeattie@ubuntu.com>  Fri, 01 Jun 2018 23:44:15 -0700
+
 git (1:2.7.4-0ubuntu1.3) xenial-security; urgency=high
 
   * SECURITY UPDATE: Git cvsserver OS Command Injection (LP: #1719740)
