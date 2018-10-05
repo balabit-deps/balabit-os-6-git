@@ -1,3 +1,22 @@
+git (1:2.7.4-0ubuntu1.5) xenial-security; urgency=medium
+
+  * SECURITY UPDATE: arbitrary code execution via submodule URLs and
+    paths in .gitsubmodules.
+    - 0001-submodule-helper-use-to-signal-end-of-clone-options.patch,
+      0002-submodule-config-ban-submodule-urls-that-start-with-.patch,
+      0003-submodule-config-ban-submodule-paths-that-start-with.patch:
+      disallow urls and files that begin with '--'.
+    - 0004-fsck-detect-submodule-urls-starting-with-dash.patch,
+      0005-fsck-detect-submodule-paths-starting-with-dash.patch:
+      reject gitmodules that contain submdule urls and files that begin
+      with '--'.
+    - CVE-2018-17456
+  * SECURITY UPDATE: incomplete fix for CVE-2017-14867
+    - 0006-cvsimport-apply-shell-quoting-regex-globally.patch: escape
+      all instances of backticks
+
+ -- Steve Beattie <sbeattie@ubuntu.com>  Fri, 05 Oct 2018 16:59:03 -0700
+
 git (1:2.7.4-0ubuntu1.4) xenial-security; urgency=medium
 
   * SECURITY UPDATE: arbitrary code execution via
