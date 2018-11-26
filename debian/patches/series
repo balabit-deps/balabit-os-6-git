@@ -31,3 +31,4 @@ archimport-use-safe_pipe_capture-for-user-input.diff
 0004-fsck-detect-submodule-urls-starting-with-dash.patch
 0005-fsck-detect-submodule-paths-starting-with-dash.patch
 0006-cvsimport-apply-shell-quoting-regex-globally.patch
+CVE-2017-15298.patch

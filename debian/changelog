@@ -1,3 +1,12 @@
+git (1:2.7.4-0ubuntu1.6) xenial-security; urgency=medium
+
+  * SECURITY UPDATE: Denial of service
+    - debian/patches/CVE-2017-15298.patch: fix in diff.h,
+      revision.c.
+    - CVE-2017-15298
+
+ -- Leonidas S. Barbosa <leo.barbosa@canonical.com>  Mon, 26 Nov 2018 09:58:29 -0300
+
 git (1:2.7.4-0ubuntu1.5) xenial-security; urgency=medium
 
   * SECURITY UPDATE: arbitrary code execution via submodule URLs and
