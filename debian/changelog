@@ -1,3 +1,13 @@
+git (1:2.7.4-0ubuntu1.7) xenial-security; urgency=medium
+
+  * SECURITY UPDATE: Multiple security issues
+    - debian/patches/CVE-2019-13xx/*.patch: upstream patches to fix issues.
+    - CVE-2019-1348, CVE-2019-1349, CVE-2019-1350, CVE-2019-1351,
+      CVE-2019-1352, CVE-2019-1353, CVE-2019-1354, CVE-2019-1387,
+      CVE-2019-19604
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Mon, 09 Dec 2019 08:51:27 -0500
+
 git (1:2.7.4-0ubuntu1.6) xenial-security; urgency=medium
 
   * SECURITY UPDATE: Denial of service
