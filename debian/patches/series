@@ -60,3 +60,7 @@ CVE-2019-13xx/0025-quote-stress-test-offer-to-test-quoting-arguments-fo.patch
 CVE-2019-13xx/0027-mingw-refuse-to-access-paths-with-trailing-spaces-or.patch
 CVE-2019-13xx/0026-mingw-refuse-to-access-paths-with-illegal-characters.patch
 CVE-2019-13xx/0028-mingw-handle-subst-ed-DOS-drives.patch
+CVE-2020-5260-1.patch
+CVE-2020-5260-2.patch
+CVE-2020-5260-3.patch
+CVE-2020-5260-4.patch
