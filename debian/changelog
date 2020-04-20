@@ -1,3 +1,30 @@
+git (1:2.7.4-0ubuntu1.9) xenial-security; urgency=medium
+
+  * SECURITY UPDATE: credential helper issue with missing host or scheme
+    - debian/patches/CVE-2020-11008-1.patch: make "quit" helper more
+      realistic in t/t0300-credentials.sh.
+    - debian/patches/CVE-2020-11008-2.patch: use more realistic inputs in
+      t/t0300-credentials.sh.
+    - debian/patches/CVE-2020-11008-3.patch: parse URL without host as
+      empty host, not unset in credential.c, http.c,
+      t/t0300-credentials.sh.
+    - debian/patches/CVE-2020-11008-4.patch: refuse to operate when missing
+      host or protocol in credential.c, t/t0300-credentials.sh.
+    - debian/patches/CVE-2020-11008-5.patch: convert gitmodules url to URL
+      passed to curl in fsck.c, t/t7416-submodule-dash-url.sh.
+    - debian/patches/CVE-2020-11008-6.patch: die() when parsing invalid
+      urls in credential.c, t/t0300-credentials.sh.
+    - debian/patches/CVE-2020-11008-7.patch: treat URL without scheme as
+      invalid in credential.c, fsck.c, t/t7416-submodule-dash-url.sh.
+    - debian/patches/CVE-2020-11008-8.patch: treat URL with empty scheme as
+      invalid in credential.c, t/t5550-http-fetch-dumb.sh,
+      t/t7416-submodule-dash-url.sh.
+    - debian/patches/CVE-2020-11008-9.patch: reject URL with empty host in
+      .gitmodules in fsck.c, t/t7416-submodule-dash-url.sh.
+    - CVE-2020-11008
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Mon, 20 Apr 2020 12:24:43 -0400
+
 git (1:2.7.4-0ubuntu1.8) xenial-security; urgency=medium
 
   * SECURITY UPDATE: credential helper issue with newlines in URL
