@@ -1,3 +1,14 @@
+git (1:2.7.4-0ubuntu1.10) xenial-security; urgency=medium
+
+  * SECURITY UPDATE: remote code exec during clone on case-insensitive FS
+    - debian/patches/CVE-2021-21300.patch: fix bug that makes checkout
+      follow symlinks in leading path in cache.h, compat/mingw.c,
+      git-compat-util.h, run-command.c, symlinks.c, t/t0021-conversion.sh,
+      t/t2006-checkout-index-basic.sh, unpack-trees.c.
+    - CVE-2021-21300
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Thu, 04 Mar 2021 08:04:31 -0500
+
 git (1:2.7.4-0ubuntu1.9) xenial-security; urgency=medium
 
   * SECURITY UPDATE: credential helper issue with missing host or scheme
